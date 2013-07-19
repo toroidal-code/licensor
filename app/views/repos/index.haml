@@ -1,0 +1,4 @@
+%h2 Your Repos
+%table{class: 'pure-table pure-table-horizontal' style: 'margin:10px auto; width:500px'}
+  %tbody
+    = partial 'repos/repo', collection: @client.repos.map{ |repo| repo['full_name'] }

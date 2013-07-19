@@ -50,7 +50,7 @@ module Licensor
     ##
     # You can manage errors like:
     #
-    # nnn  error 404 do
+    #   error 404 do
     #     render 'errors/404'
     #   end
     #
@@ -58,42 +58,5 @@ module Licensor
     #     render 'errors/505'
     #   end
     #
-    configure do
-      options = {
-        site: 'https://github.com/',
-        authorize_url: '/login/oauth/authorize',
-        token_url: '/login/oauth/access_token',
-      }
-      
-      set :client, OAuth2::Client.new(ENV['CLIENT_ID'], ENV['CLIENT_SECRET'], options)
-    end
-    
-    get '/authorize' do
-      params = {
-        scope: 'read_write',
-      }  
-      
-      # Redirect the user to the authorize_uri endpoint
-      url = settings.client.auth_code.authorize_url(params)
-      redirect url
-    end
-    
-    get '/oauth/callback' do
-      # Pull the authorization_code out of the response
-      code = params[:code]
-      
-      # Make a request to the access_token_uri endpoint to get an access_token
-      
-      @resp = settings.client.auth_code.get_token(code, :params => {:scope => 'read_write'})
-      @access_token = @resp.token
-      
-      # Use the access_token as you would a regular live-mode API key
-      
-      render 'callback'
-    end
-
-    get "/" do
-      render 'main'
-    end
   end
 end

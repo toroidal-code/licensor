@@ -1,0 +1,6 @@
+%tr
+  %td
+    - files = @client.contents repo
+    - licensed = files.any? { |f| f['name'] == 'LICENSE.txt' }
+    = " #{licensed} - #{repo} "
+
