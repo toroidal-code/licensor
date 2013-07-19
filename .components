@@ -1,0 +1,9 @@
+---
+:orm: none
+:test: rspec
+:mock: none
+:script: none
+:renderer: haml
+:stylesheet: sass
+:namespace: Licensor
+:migration_format: number
