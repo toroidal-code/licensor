@@ -60,9 +60,9 @@ module Licensor
     #
     configure do
       options = {
-        site: 'https://github.com/login',
-        authorize_url: '/oauth/authorize',
-        token_url: '/oauth/access_token',
+        site: 'https://github.com/',
+        authorize_url: '/login/oauth/authorize',
+        token_url: '/login/oauth/access_token',
       }
       
       set :client, OAuth2::Client.new(ENV['CLIENT_ID'], ENV['CLIENT_SECRET'], options)
