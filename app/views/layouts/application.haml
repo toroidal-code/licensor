@@ -1,0 +1,13 @@
+!!!Strict
+%html
+  %head
+    %title= [@title, "Padrino Sample Blog"].compact.join(" | ")
+    = stylesheet_link_tag 'http://yui.yahooapis.com/pure/0.2.1/pure-min.css', 'main', 'application'
+    = yield_content :include
+  %body{:style=>'text-align: center'}
+    #header
+      %h1 Licensor
+    #container
+      #main= yield
+    #footer
+      Copyright (c) 2013 Katherine Whitlock
