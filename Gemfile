@@ -6,8 +6,8 @@ ruby '2.0.0'
 # gemspec
 
 # Server requirements
-# gem 'puma'
-gem 'thin'
+gem 'puma'
+# gem 'thin'
 # gem 'trinidad', :platform => 'jruby'
 
 # Optional JSON codec (faster performance)
@@ -15,7 +15,6 @@ gem 'thin'
 
 # Project requirements
 gem 'rake'
-gem 'oauth2'
 gem 'octokit'
 
 # Component requirements

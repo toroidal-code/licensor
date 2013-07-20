@@ -3,5 +3,9 @@
   %td{class: licensed ? 'true' : 'false'}
     = licensed
   %td
-    = repo
-
+    = link_to repo.split('/')[-1], "https://github.com/#{repo}"
+  %td
+    - if !licensed
+      = link_to '+', 'choosealicense.com'
+    - else
+      = ' '
