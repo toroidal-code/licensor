@@ -1,3 +1,5 @@
+%h2.content-subhead your repositories:
+= link_to 'go back', '/'
 %table{class: 'pure-table pure-table-horizontal', style: 'margin:10px auto; width:500px'}
   %tbody
     = partial 'repos/repo', collection: Octokit.repos(params[:username]).map{ |repo| repo['full_name'] }
