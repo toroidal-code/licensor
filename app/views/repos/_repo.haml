@@ -6,6 +6,6 @@
     = link_to repo.split('/')[-1], "https://github.com/#{repo}"
   %td
     - if !licensed
-      = link_to '+', 'http://choosealicense.com'
+      = link_to '+', "https://github.com/#{repo}/new/master?filename=LICENSE"  #'/add?repo=#{repo}'
     - else
       = ' '

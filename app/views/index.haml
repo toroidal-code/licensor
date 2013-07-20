@@ -1,5 +1,5 @@
 %h2.content-subhead enter your GitHub username below
 - form_tag '/repos', :class => 'pure-form', :method => 'get' do
   = flash_tag(:notice)
-  = text_field_tag :username, value: params[:userame], type: 'text', placeholder: 'Username'
+  = text_field_tag :username, value: params[:username], type: 'text', placeholder: 'Username'
   = submit_tag "Go!", class: 'pure-button pure-button-primary'
