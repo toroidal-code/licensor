@@ -12,10 +12,6 @@ gem 'oj'
 gem 'rake'
 gem 'octokit'
 
-# Caching
-gem 'memcachier'
-gem 'dalli'
-
 # Component requirements
 gem 'sass'
 gem 'haml'
