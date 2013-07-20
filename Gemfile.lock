@@ -9,7 +9,6 @@ GEM
       tzinfo (~> 0.3.37)
     addressable (2.3.5)
     atomic (1.1.10)
-    dalli (2.6.4)
     diff-lcs (1.2.4)
     faraday (0.8.7)
       multipart-post (~> 1.1)
@@ -25,7 +24,6 @@ GEM
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
-    memcachier (0.0.2)
     mime-types (1.23)
     minitest (4.7.5)
     multi_json (1.7.7)
@@ -105,9 +103,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  dalli
   haml
-  memcachier
   octokit
   oj
   padrino (= 0.11.2)
