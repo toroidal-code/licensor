@@ -1,7 +1,7 @@
 %tr
   - licensed =  Octokit.contents(repo).any? { |f| f['name'] == 'LICENSE.txt' || f['name'] == 'LICENSE' }
-  %td{class: licensed ? 'yes' : 'no'}
-    = licensed
+  %td{class: licensed ? 'true' : 'false'}
+    = licensed ? 'yes' : 'no'
   %td
     = link_to repo.split('/')[-1], "https://github.com/#{repo}"
   %td
