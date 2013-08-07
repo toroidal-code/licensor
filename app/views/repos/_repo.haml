@@ -1,9 +1,9 @@
 %tr
-  - licensed =  Octokit.contents(repo).any? { |f| /license/i === f['name'] }
-  %td{class: licensed ? 'true' : 'false'}
+  - licensed = is_licensed? repo
+  %td{class: licensed.to_s}
     = licensed ? 'yes' : 'no'
   %td
-    = link_to repo.split('/')[-1], "https://github.com/#{repo}"
+    = link_to repo.split('/').last, "https://github.com/#{repo}"
   %td
     - if !licensed
       = link_to '+', "https://github.com/#{repo}/new/master?filename=LICENSE", target: '_blank' #'/add?repo=#{repo}'

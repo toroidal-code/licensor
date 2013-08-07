@@ -1,7 +1,7 @@
 !!!Strict
 %html
   %head
-    %title= [@title, 'Licensor'].compact.join(' | ')
+    %title= page_title
     = stylesheet_link_tag 'http://yui.yahooapis.com/pure/0.2.1/pure-min.css', 'application'
     = yield_content :include
   %body

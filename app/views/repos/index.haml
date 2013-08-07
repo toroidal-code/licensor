@@ -1,8 +1,3 @@
 %h2.content-subhead your repositories:
 %table.repositories.pure-table.pure-table-horizontal
-  %tbody
-    - begin
-      = partial 'repos/repo', collection: Octokit.repos(params[:username],{type: 'owner', sort: 'pushed'}).map{ |repo| repo['full_name'] }
-    - rescue
-      - redirect 'errors/nouser'
-    
+  = repository_list
