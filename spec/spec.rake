@@ -12,6 +12,8 @@ begin
 
   desc "Run complete application spec suite"
   task 'spec' => spec_tasks.map { |f| "spec:#{f}" }
+
+  task default: :spec
 rescue LoadError
   puts "RSpec is not part of this bundle, skip specs."
 end
