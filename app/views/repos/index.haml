@@ -1,5 +1,5 @@
 %h2.content-subhead your repositories:
-%table{class: 'pure-table pure-table-horizontal', style: 'margin:10px auto; width:500px'}
+%table.repositories.pure-table.pure-table-horizontal
   %tbody
     - begin
       = partial 'repos/repo', collection: Octokit.repos(params[:username],{type: 'owner', sort: 'pushed'}).map{ |repo| repo['full_name'] }
