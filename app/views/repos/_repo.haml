@@ -1,5 +1,5 @@
 %tr
-  - licensed =  Octokit.contents(repo).any? { |f| f['name'] == 'LICENSE.txt' || f['name'] == 'LICENSE' }
+  - licensed =  Octokit.contents(repo).any? { |f| /license/i === f['name'] }
   %td{class: licensed ? 'true' : 'false'}
     = licensed ? 'yes' : 'no'
   %td
