@@ -22,6 +22,5 @@ Licensor::App.controllers :repos do
   # get '/example' do
   #   'Hello world!'
   # end
-  
 
 end
