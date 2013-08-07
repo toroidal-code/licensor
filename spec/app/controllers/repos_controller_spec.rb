@@ -1,11 +1,11 @@
 require 'spec_helper'
 
-describe "ReposController" do
+describe 'ReposController' do
   before do
-    get "/"
+    get '/'
   end
 
-  it "returns hello world" do
-    last_response.body.should == "Hello World"
+  it 'returns hello world' do
+    last_response.body.should == 'Hello World'
   end
 end

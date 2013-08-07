@@ -4,7 +4,7 @@ Licensor::App.controllers do
     Octokit.client_secret = ENV['CLIENT_SECRET']
   end
 
-  get "/" do
+  get '/' do
     render 'index'
   end
 end
