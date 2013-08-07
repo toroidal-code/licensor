@@ -1,4 +1,5 @@
 module Licensor
+  # The Padrino app for Licensor
   class App < Padrino::Application
     register SassInitializer
     register Padrino::Rendering

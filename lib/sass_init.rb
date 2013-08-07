@@ -1,3 +1,4 @@
+# Enables support for SASS template reloading in rack applications
 module SassInitializer
   def self.registered(app)
     # Enables support for SASS template reloading in rack applications.
