@@ -7,4 +7,8 @@ Licensor::App.controllers do
   get "/" do
     render 'index'
   end
+
+  get :user, with: :username do
+    render '/repos/index'
+  end
 end
