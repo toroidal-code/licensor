@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-ruby '1.9.3', engine: 'rbx', engine_version: '2.0.0.rc1'
+ruby '2.1.0', engine: 'rbx', engine_version: '2.2.7'
 
 # Server requirements
 gem 'puma'
@@ -21,6 +21,6 @@ gem 'rspec', :group => 'test'
 gem 'rack-test', :require => 'rack/test', :group => 'test'
 
 # Padrino Stable Gem
-gem 'padrino', '0.11.2'
+gem 'padrino', '0.11.4'
 
 
